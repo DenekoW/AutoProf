@@ -1,4 +1,8 @@
-from photutils.detection import DAOStarFinder, IRAFStarFinder
+#old version of Photutils is not compatible with the new version
+try:
+    from photutils import DAOStarFinder, IRAFStarFinder
+except:
+    from photutils.detection import DAOStarFinder, IRAFStarFinder
 import numpy as np
 import matplotlib.pyplot as plt
 from astropy.visualization import SqrtStretch, LogStretch
